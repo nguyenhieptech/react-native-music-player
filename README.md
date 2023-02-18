@@ -1,4 +1,4 @@
-# React Native Musium
+# React Native Music Player
 
 This project is set up by following [the official guideline](https://reactnative.dev/docs/environment-setup).
 
