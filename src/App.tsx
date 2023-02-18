@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
+import { AppProvider } from './providers';
 
 export default function App() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>React Native Misium</Text>
-    </View>
-  )
+    <AppProvider>
+      <View className="flex-1 justify-center items-center">
+        <Text className="font-primary-600">React Native Misium</Text>
+      </View>
+    </AppProvider>
+  );
 }
