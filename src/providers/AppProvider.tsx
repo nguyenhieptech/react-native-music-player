@@ -1,3 +1,5 @@
+// organize-imports-ignore
+import 'src/i18n';
 import React, { PropsWithChildren } from 'react';
 import { GestureHandlerProvider } from './GestureHandlerProvider';
 
