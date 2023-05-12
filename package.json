@@ -8,14 +8,15 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
+    "ios-se": "react-native run-ios --simulator='iPhone SE (2nd generation) (13.7)'"
   },
   "dependencies": {
     "i18next": "^22.4.10",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-i18next": "^12.1.5",
-    "react-native": "0.71.3",
+    "react-native": "0.71.8",
     "react-native-gesture-handler": "^2.9.0",
     "react-native-reanimated": "^2.14.4"
   },

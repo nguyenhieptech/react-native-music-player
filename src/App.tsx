@@ -1,9 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
-import { useI18n } from 'src/i18n';
 import { AppProvider } from './providers';
 
 export default function App() {
-  const { t } = useI18n();
+  const { t } = useTranslation('translation');
 
   return (
     <AppProvider>

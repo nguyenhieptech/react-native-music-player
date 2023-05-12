@@ -1,22 +1,26 @@
+// https://brainsandbeards.com/blog/i18n-in-react-native-apps
+// https://dev.to/mell3s/react-native-react-i18next-setup-typescript-22hj
+// https://gist.github.com/raghava/6aa2a45f4b897a80c012
+
 import i18n from 'i18next';
-import { initReactI18next, useTranslation } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 import translationEN from './locales/en';
-import translationVI from './locales/vi';
 
 export const resources = {
   en: {
     translation: translationEN,
   },
-  vi: {
-    translation: translationVI,
-  },
+  // TODO: Add Vietnamese Locale
+  // vi: {
+  //   translation: translationVI,
+  // },
 } as const;
 
-export type Resource = (typeof resources)['en'];
+export type ResourceType = (typeof resources)['en'];
 
 export const lang = 'en';
 
-i18n.use(initReactI18next).init({
+export default i18n.use(initReactI18next).init({
   resources,
   lng: lang,
   fallbackLng: lang,
@@ -24,9 +28,7 @@ i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
+  returnNull: false,
+  // https://stackoverflow.com/questions/70493788/i18nextpluralresolver-your-environment-seems-not-to-be-intl-api-compatible-u
   compatibilityJSON: 'v3',
 });
-
-export function useI18n() {
-  return useTranslation('translation');
-}
